@@ -1,0 +1,24 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "Server for our chat App",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chaturvediani/Chat-App.git"
+  },
+  "author": "Animesh",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/chaturvediani/Chat-App/issues"
+  },
+  "homepage": "https://github.com/chaturvediani/Chat-App#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.1",
+    "socket.io": "^4.5.1"
+  }
+}
