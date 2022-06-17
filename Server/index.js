@@ -9,15 +9,19 @@ const io = require('socket.io')(server, {
   });
 const users={}
 io.on('connection', (socket)=>{
-    console.log('connected!')
+    // console.log('connected!')
     socket.on('new-user-joined',name=>{
-        console.log('new user:', name);
+        // console.log('new user:', name);
       users[socket.id]=name;
       socket.broadcast.emit('user-joined',name)
     });
     socket.on('send',(msg)=>{
         socket.broadcast.emit('recieve',{message:msg,name:users[socket.id]});
     });
+    socket.on('disconnect', msg=>{
+      socket.broadcast.emit('user-left',users[socket.id]);
+      delete users[socket.id];
+    })
 
 })
 server.listen(3000,()=>{

@@ -7,15 +7,18 @@
     <title>AnimeshChatApp</title>
     <script defer src="http://localhost:3000/socket.io/socket.io.js"></script>
     <script defer src="frontend/client.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     <nav>
     <img class="logo" src="chat-logo.png">
+    <h3>Online Users: <span id="count"></span></h3>
 </nav>
 <div class="container">
-    <div class="message left">Nidhi:Hi</div>
-    <div class="message right">Ronak:Hey</div>
+    <!-- <div class="message left">Nidhi:Hi</div>
+    <div class="message right">Ronak:Hey</div> -->
 </div>
 <div class="send">
     <form action="#" id="send-container">
